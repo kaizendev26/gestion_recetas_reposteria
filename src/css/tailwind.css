@@ -1,0 +1,56 @@
+/* public/css/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+/* Tu propio estilo personalizado aquí */
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000; /* Cambiado a negro */
+  padding-top: 20px;
+}
+
+.logo {
+  /* text-align: center; */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.option:hover {
+  background-color: #555;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+/* .insumos h1{
+  font-size: 20px;
+} */

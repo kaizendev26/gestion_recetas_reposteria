@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- <div class="flex w-screen h-screen">
+    <div class="w-[0px] md:w-[250px] duration-300 translate-x-[-100%] md:translate-x-0
+    overflow-hidden bg-black text-white" id="sideBar">
+      <div class="w-[250px] overflow-auto">
+        <div class="text-2xl px-5 py-4">Logo</div>
+        <div class="mx-5 py-4 flex flex-col gap-2 mt-5" id="options">
+          <a href="#" class="px-1 py-2 flex items-center gap-4 hover:bg-gray-700 hover:rounded-sm">
+            <span class="icon-[ic--twotone-inventory]"></span>
+            <span>Insumos</span>
+          </a>
+          <a href="#" class="px-1 py-2 flex items-center gap-4 hover:bg-gray-700 hover:rounded-sm">
+            <span class="icon-[ph--book-open-text-bold]"></span>
+            <span>Recetas</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="grow px-5 py-4">
+      <span id="menuToggleButton" class="icon-[fluent--navigation-20-filled] text-3xl cursor-pointer"></span>
+
+      <div class="mt-5 ">
+        este es el contenido
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let toggleButton = document.querySelector('#menuToggleButton')
+      .addEventListener('click', () => {
+        let sidebar = document.querySelector("#sideBar")
+        sidebar.classList.toggle('md:translate-x-[-100%]')
+        sidebar.classList.toggle('translate-x-[-100%]')
+        sidebar.classList.toggle('md:w-[0px]')
+        if (sidebar.classList.contains("w-[0px]")) {
+          sidebar.classList.remove('w-[0px]')
+          sidebar.classList.add('w-[250px]')
+        } else {
+          sidebar.classList.add('w-[0px]')
+          sidebar.classList.remove('w-[250px]')
+        }
+      })
+  </script> -->
+  <div class="flex w-screen h-screen">
+    <!-- Sidebar -->
+    <div class="fixed z-30 w-[250px] h-full overflow-auto bg-black text-white transform -translate-x-full transition-transform duration-300" id="sideBar">
+      <!-- Logo -->
+      <div class="text-2xl px-5 py-4">Logo</div>
+      <!-- Navigation -->
+      <div class="mx-5 py-4 flex flex-col gap-2 mt-5" id="options">
+        <!-- Insumos Link -->
+        <a href="#" class="px-1 py-2 flex items-center gap-4 hover:bg-gray-700 rounded-sm">
+          <!-- Icon Placeholder -->
+          <span class="icon-[ic--twotone-inventory]"></span>
+          <span>Insumos</span>
+        </a>
+        <!-- Recetas Link -->
+        <a href="#" class="px-1 py-2 flex items-center gap-4 hover:bg-gray-700 rounded-sm">
+          <!-- Icon Placeholder -->
+          <span class="icon-[ph--book-open-text-bold]"></span>
+          <span>Recetas</span>
+        </a>
+      </div>
+    </div>
+    <!-- Page Content -->
+    <div class="grow flex flex-col">
+      <!-- Menu Toggle Button -->
+      <div class="px-5 py-4">
+        <span id="menuToggleButton" class="icon-[fluent--navigation-20-filled] text-3xl cursor-pointer"></span>
+      </div>
+      <!-- Main Content -->
+      <div class="mt-5 px-5">
+        este es el contenido
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    let sideBar = document.querySelector("#sideBar");
+    // JavaScript to toggle the sidebar
+    document.querySelector('#menuToggleButton').addEventListener('click', () => {    
+      sideBar.classList.toggle('-translate-x-full');
+    });
+
+    document.addEventListener('click', (e) => {
+      // Verificar si el clic fue fuera del sidebar
+      if (!sideBar.contains(e.target) && !menuToggleButton.contains(e.target)) {
+        // Si el sidebar está abierto y se clickea fuera, cerrarlo
+        if (!sideBar.classList.contains('-translate-x-full')) {
+          sideBar.classList.add('-translate-x-full');
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

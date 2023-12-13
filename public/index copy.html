@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="/node_modules/ag-grid-community/styles/ag-grid.min.css">
+    <link rel="stylesheet" href="/node_modules/ag-grid-community/styles/ag-theme-material.min.css">
+    <link rel="stylesheet" href="/node_modules/ag-grid-community/styles/ag-theme-quartz.min.css">
+
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            Gestor de recetas
+        </div>
+        <div class="options">
+            <div class="option" onclick="navigateTo('insumos')">
+                <span class="icon-[ic--twotone-inventory] mr-3"></span>
+                <span class="">Insumos</span>
+            </div>
+            <div class="option" onclick="navigateTo('recetas')">
+                <span class="icon-[ph--book-open-text-bold] mr-3"></span>
+                <span class="">Recetas</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="pageContent">
+    </div>
+
+    <!-- <script src="src/insumos.js" type="module"></script> -->
+    <script src="src/index.js" type="module"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/tailwind.css" />
+        <link
+            rel="stylesheet"
+            href="/node_modules/ag-grid-community/styles/ag-grid.min.css" />
+        <link
+            rel="stylesheet"
+            href="/node_modules/ag-grid-community/styles/ag-theme-material.min.css" />
+        <link
+            rel="stylesheet"
+            href="/node_modules/ag-grid-community/styles/ag-theme-quartz.min.css" />
+    </head>
+
+    <body>
+        <div class="flex w-screen h-screen">
+            <!-- Sidebar -->
+            <div
+                class="fixed z-30 w-[250px] h-full overflow-auto bg-black text-white transform -translate-x-full transition-transform duration-300"
+                id="sideBar">
+                <!-- Logo -->
+                <div class="text-2xl px-5 py-4">Logo</div>
+                <!-- Navigation -->
+                <div class="mx-5 py-4 flex flex-col gap-2 mt-5" id="options">
+                    <!-- Insumos Link -->
+                    <a
+                        href="javascript:;" onclick="navigateTo('insumos')"
+                        class="px-1 py-2 flex items-center gap-4 hover:bg-gray-700 rounded-sm">
+                        <span class="icon-[ic--twotone-inventory]"></span>
+                        <span>Insumos</span>
+                    </a>
+                    <!-- Recetas Link -->
+                    <a
+                        href="javascript:;" onclick="navigateTo('recetas')"
+                        class="px-1 py-2 flex items-center gap-4 hover:bg-gray-700 rounded-sm">
+                        <span class="icon-[ph--book-open-text-bold]"></span>
+                        <span>Recetas</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Page Content -->
+            <div class="grow flex flex-col">
+                <!-- Menu Toggle Button -->
+                <div class="px-5 py-4">
+                    <span
+                        id="menuToggleButton"
+                        class="icon-[fluent--navigation-20-filled] text-3xl cursor-pointer"></span>
+                </div>
+                <!-- Main Content -->
+                <div class="px-5" id="pageContent"></div>
+            </div>
+        </div>
+        <!-- <script src="src/insumos.js" type="module"></script> -->
+        <script src="src/index.js" type="module"></script>
+    </body>
+</html>
